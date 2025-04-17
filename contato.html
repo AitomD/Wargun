@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>War Gun - Contato</title>
+    <link rel="stylesheet" type="text/css" href="contato.css" />
+    <link rel="icon" type="image/png" href="icone.png" />
+  </head>
+
+  <body>
+    <header>
+      <div class="grid">
+        <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
+        <nav>
+          <div class="imgl">
+            <img src="logonav.jpg" width="70" alt="War Gun" />
+          </div>
+          <a href="index.html" title="Home">Home</a>
+          <a href="sobre.html" title="Sobre">Sobre</a>
+          <a href="contato.html" title="Contato">Contato</a>
+          <a href="jogar.html" title="Jogar">Jogar</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="preencher">
+        <h3>Preencha o formulário de contato</h3>
+        <form id="Contato">
+          <div class="nome">
+            <label for="nome">Digite seu nome:</label><br />
+            <input type="text" id="nome" name="nome" required /><br /><br />
+          </div>
+
+          <div class="email">
+            <label for="email">Digite seu e-mail:</label><br />
+            <input type="email" id="email" name="email" required /><br /><br />
+          </div>
+
+          <div class="msg">
+            <label for="mensagem">Digite sua mensagem:</label><br />
+            <textarea id="mensagem" name="mensagem" rows="5" required></textarea><br /><br />
+          </div>
+
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>Desenvolvido por Aitom Donatoni - Todos os direitos reservados</p>
+    </footer>
+
+    <!-- Script menu responsivo -->
+    <script>
+      const menuToggle = document.querySelector('.menu-toggle');
+      const nav = document.querySelector('nav');
+
+      menuToggle.addEventListener('click', () => {
+        nav.classList.toggle('active');
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background-image: url(fundozumbi.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* Cabeçalho com logo e navegação */
+.grid {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 15px 20px;
+  position: relative;
+}
+
+.imgl {
+  position: absolute;
+  top: 15px;
+  left: 30px;
+}
+
+nav a {
+  margin: 10px;
+  color: white;
+  border: 1px solid white;
+  text-align: center;
+  border-radius: 15px;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: 0.3s;
+  display: inline-block;
+}
+
+nav a:hover {
+  background-color: #ffffff22;
+  border-radius: 20px;
+  color: #fff;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 32px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* Iframe responsivo 1280x720 */
+.iframe-container {
+  position: relative;
+  width: 100%;
+  max-width: 1280px;
+  aspect-ratio: 16 / 9;
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+.iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+  .grid {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .menu-toggle {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    text-align: right;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  nav a {
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    text-align: right;
+  }
+
+  .imgl {
+    position: static;
+    margin-bottom: 10px;
+  }
+}

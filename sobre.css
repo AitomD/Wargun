@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: 'Orbitron', sans-serif;
+  color: white;
+}
+
+body {
+  background-image: url(fundozumbi.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  font-family: 'Orbitron', sans-serif;
+
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  z-index: -1;
+}
+
+/* TOPO */
+.grid {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.imgl {
+  position: absolute;
+  top: 15px;
+  left: 30px;
+}
+
+nav a {
+  margin: 10px;
+  color: white;
+  border: 1px solid white;
+  border-radius: 15px;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  background-color: white;
+  color: black;
+  border-radius: 30px;
+}
+
+/* CONTEÚDO */
+.gridsb {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 40px 20px;
+  gap: 40px;
+}
+
+.sb1, .sb2 {
+  flex: 1 1 400px;
+  max-width: 1000px;
+  border: 1px solid white;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
+
+.gridsb h1, .gridsb h2 {
+  font-family: 'Orbitron', sans-serif;
+  margin-bottom: 15px;
+}
+
+.gridsb p {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.gridsb img {
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+/* BOTÃO MENU MOBILE */
+.menu-toggle {
+  display: none;
+}
+
+
+/* mobile */
+
+@media (max-width: 768px) {
+
+  .grid {
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 15px;
+  }
+
+  .imgl {
+    position: static;
+    margin-bottom: 10px;
+    align-self: flex-start;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 30px;
+    background: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  nav a {
+    width: 100%;
+    text-align: right;
+    margin: 5px 0;
+    padding: 10px;
+  }
+
+  .gridsb {
+    flex-direction: column;
+    padding: 20px 10px;
+    gap: 20px;
+  }
+
+  .sb1, .sb2 {
+    flex: 1 1 100%;
+    padding: 15px;
+  }
+}

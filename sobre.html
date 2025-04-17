@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>War Gun</title>
+    <link rel="stylesheet" type="text/css" href="sobre.css" />
+    <link rel="icon" type="image/png" href="icone.png" />
+  </head>
+
+  <body>
+    <header>
+      <div class="grid">
+        <div class="imgl">
+          <img src="logonav.jpg" width="70" alt="Logo War Gun" />
+        </div>
+
+        <!-- menu responsivo -->
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+        <!-- Nav-->
+        <nav id="menu-nav">
+          <a href="index.html" title="Home">Home</a>
+          <a href="sobre.html" title="Sobre">Sobre</a>
+          <a href="contato.html" title="Contato">Contato</a>
+          <a href="jogar.html" title="Jogar">Jogar</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="gridsb">
+      <div class="sb1">
+        <h1>Processo do Jogo</h1>
+        <p>
+          A conclusão do jogo levou cerca de 2 a 3 semanas, desde a escolha de
+          sprites e temas até os últimos ajustes necessários para que tudo
+          funcionasse corretamente: sprites, sons, etc.
+        </p>
+        <img
+          src="construct3.png"
+          alt="Tela do Construct 3"
+          class="imagem-ajustada"
+        />
+      </div>
+
+      <div class="sb2">
+        <h2>Fotos do Processo</h2>
+        <p>
+          Essa é uma imagem do próprio projeto do jogo, mostrando toda a
+          programação por trás das telas de início, fases e muito mais. Tudo
+          sendo apresentado de forma clara.
+        </p>
+        <img
+          src="fundofase1.png"
+          alt="Fundo da fase 1"
+          class="imagem-ajustada"
+          
+        />
+        <h3>Sobre mim</h3>
+        <p>
+          Meu nome é Aitom Henrique Donatoni,tenho 22 anos,atualmente trabalho com agricultura familiar, estou na faculdade
+          para aprender sobre programação,por ser um assunto de meu interesse e estar em alta no mercado atual.
+        </p>
+      </div>
+    </section>
+    <footer>
+      Direitos autorais – Desenvolvido por Aitom Donatoni
+    </footer>
+    <!-- Script para ativar/desativar o menu -->
+    <script>
+      function toggleMenu() {
+        const nav = document.getElementById("menu-nav");
+        nav.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>
